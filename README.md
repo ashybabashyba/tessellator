@@ -1,15 +1,18 @@
 # Tessellator mesher
 
 ## Features
+
 Tessellator is a mesher focused on generate meshes and data structures which are suitable for FDTD algorithms. It includes the following capabilities:
 
 - Generate staircased meshes from lines, surfaces, and volumes.
-- Support for rectiliniear (graded) grids.
+- Support for rectilinear (graded) grids.
 - Import/Export in STL or VTK formats.
 - Conflict resolution between different layers using a predefined hierarchy.
 - Generate conformal meshes with fixed distance intersection with grid planes.
 
 ## Compilation
+
+When using presets, make sure to define the environment variable `VCPKG_ROOT` to your `vcpkg` installation.
 
 ## Contributing
 

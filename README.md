@@ -1,5 +1,8 @@
 # Tessellator mesher
 
+[![License](https://img.shields.io/badge/License-GPL_3.0-blue.svg)](https://opensource.org/licenses/gpl-3.0)
+[![Build and test](https://github.com/OpenSEMBA/tessellator/actions/workflows/build-and-test.yml/badge.svg)](https://github.com/OpenSEMBA/tessellator/actions/workflows/build-and-test.yml)
+
 ## Features
 
 Tessellator is a mesher focused on generate meshes and data structures which are suitable for FDTD algorithms. It includes the following capabilities:

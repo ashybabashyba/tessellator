@@ -2,16 +2,20 @@
   "version": 4,
   "configurePresets": [
     {
-      "name": "vs22-dbg",
-      "displayName": "vs22-dbg",
+      "name": "msbuild-vcpkg",
+      "displayName": "MSBuild (vcpkg toolchain) Configure Settings",
+      "description": "Configure with VS generators and with vcpkg toolchain",
       "generator": "Visual Studio 17 2022",
-      "toolset": "host=x64",
-      "architecture": "x64",
-      "binaryDir": "${sourceDir}/build/${presetName}",
+      "binaryDir": "build/${presetName}",
+      "architecture": {
+        "strategy": "set",
+        "value": "x64"
+      },
       "cacheVariables": {
-        "CMAKE_TOOLCHAIN_FILE": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake",
-        "CMAKE_BUILD_TYPE": "Debug",
-        "CMAKE_INSTALL_PREFIX": "${sourceDir}/out/install/${presetName}"
+        "CMAKE_TOOLCHAIN_FILE": {
+          "type": "FILEPATH",
+          "value": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake"
+        }
       }
     },
     {
@@ -30,12 +34,10 @@
   ],
   "buildPresets": [
     {
-      "name": "Debug",
-      "description": "",
-      "displayName": "x64 debug",
-      "configurePreset": "Debug",
-      "jobs": 8,
-      "cleanFirst": true
+      "name": "msbuild-vcpkg",
+      "configurePreset": "msbuild-vcpkg",
+      "displayName": "Build MSBuild",
+      "description": "Build with MSBuild (VS)"
     }
   ]
 }

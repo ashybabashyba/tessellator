@@ -38,7 +38,7 @@ add_executable(tessellator_tests
 	"utils/GeometryTest.cpp"
 	"utils/GridToolsTest.cpp"
 	"utils/MeshToolsTest.cpp"
-)
+ "CJ_tests/IntersectionTest.cpp")
 
 target_link_libraries(tessellator_tests	
 	tessellator
